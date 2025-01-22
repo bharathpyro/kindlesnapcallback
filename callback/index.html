@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kindle Auth Callback</title>
+</head>
+<body>
+    <script>
+        // Redirect to app with the auth code
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        if (code) {
+            window.location.href = `kindlesnap://callback?code=${code}`;
+        } else {
+            document.write('No authorization code received');
+        }
+    </script>
+</body>
+</html>
