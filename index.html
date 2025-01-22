@@ -6,13 +6,7 @@
 <body>
     <h1>Kindle Auth Callback Handler</h1>
     <script>
-        //
-        // Handle the callback
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        if (code) {
-            window.location.href = `kindlesnap://callback?code=${code}`;
-        }
+        window.location.href = '/kindlesnapcallback/callback' + window.location.search;
     </script>
 </body>
 </html>
